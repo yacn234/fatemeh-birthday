@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#8b5cf6">
+  <title>فاطمه.exe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <section id="boot" class="screen active">
+      <div class="terminal">
+        <div class="terminal-top">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title">fatemeh.exe</span>
+        </div>
+
+        <div class="terminal-body">
+          <div id="bootText" class="code-text"></div>
+          <button id="runBtn" class="primary-btn hidden">اجرای برنامه <span>♥</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="code" class="screen">
+      <div class="code-window">
+        <div class="window-top">
+          <span>birthday.java</span>
+          <span class="status">● در حال اجرا</span>
+        </div>
+
+        <pre id="codeText" class="code-editor"></pre>
+
+        <div class="compile-box">
+          <div class="compile-label">
+            <span id="compileStatus">در حال اجرای کد...</span>
+            <span id="compilePercent">0%</span>
+          </div>
+          <div class="progress"><div id="progressBar"></div></div>
+        </div>
+
+        <button id="continueBtn" class="primary-btn hidden">ادامه <span>→</span></button>
+      </div>
+    </section>
+
+    <section id="error" class="screen">
+      <div class="message-card">
+        <div class="error-icon">!</div>
+        <div class="eyebrow">خطای غیرمنتظره</div>
+        <h1>سیستم با یک سؤال روبه‌رو شد...</h1>
+        <p>
+          چرا بعضی آدم‌ها از یک «اسم» ساده،
+          تبدیل می‌شوند به یک «آدم خاص»؟
+        </p>
+        <button id="checkErrorBtn" class="primary-btn">بررسی خطا</button>
+      </div>
+    </section>
+
+    <section id="birthday" class="screen">
+      <div class="birthday-card">
+        <div class="sparkle">✦</div>
+        <div class="eyebrow">۲۱ مرداد</div>
+        <h1>فاطمه...</h1>
+        <p>
+          بعضی تاریخ‌ها فقط یک روز معمولی در تقویم‌اند؛
+          اما بعضی تاریخ‌ها دلیل دارند که آدم یادشان بماند.
+        </p>
+        <p>
+          امیدوارم سال جدید زندگیت پر از اتفاق‌هایی باشه
+          که ارزش به یاد موندن داشته باشن؛
+          پر از آرامش، لبخند، موفقیت
+          و آدم‌هایی که بودنت براشون مهمه.
+        </p>
+        <div class="wish">تولدت مبارک فاطمه ❤️</div>
+        <button id="secretBtn" class="secret-btn" aria-label="پیام مخفی" title="یه چیز مخفی اینجاست...">
+          <span class="egg">🥚</span>
+          <span class="egg-hint">؟</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="secret" class="screen">
+      <div class="secret-card">
+        <div class="terminal-line">&gt; دسترسی به فایل مخفی...</div>
+        <div class="file-name">secret_message.txt</div>
+        <div id="secretQuestion" class="secret-question">
+          باز کردن فایل؟
+          <div class="secret-actions">
+            <button id="openSecretBtn" class="primary-btn">بله</button>
+          </div>
+        </div>
+        <div id="secretContent" class="secret-content hidden">
+          <p>راستش...</p>
+          <p>
+            این برنامه فقط برای تبریک تولد ساخته نشد.
+          </p>
+          <p>
+            می‌خواستم برای تولدت چیزی بسازم
+            که مثل تبریک‌های معمولی نباشه.
+          </p>
+          <p class="highlight">
+            چون ارزش تو بیشتر از یک تبریک معمولیه ❤️
+          </p>
+          <button id="finishBtn" class="primary-btn">پایان برنامه</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="finish" class="screen">
+      <div class="finish-card">
+        <div class="heart">♥</div>
+        <div class="terminal-line">Program finished.</div>
+        <h1>اما بعضی برنامه‌ها<br>هیچ‌وقت واقعاً تمام نمی‌شوند...</h1>
+        <div class="final-wish">تولدت مبارک فاطمه ❤️</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
