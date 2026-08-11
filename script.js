@@ -2,7 +2,9 @@ const CONFIG = {
   name: "فاطمه رحیمی",
   firstName: "فاطمه",
   birthday: "۲۱ مرداد",
-  accentColor: "#8b5cf6"
+  accentColor: "#f08bb5",
+  favoriteColor: "صورتی",
+  favoriteFlower: "لیلیوم"
 };
 
 document.documentElement.style.setProperty("--accent", CONFIG.accentColor);
@@ -63,7 +65,9 @@ if (${CONFIG.firstName}.isSpecial()) {
     smile.activate();
 }
 
-birthday.message = "امروز روز توست.";`;
+birthday.message = "امروز روز توست.";
+favorite.color = "${CONFIG.favoriteColor}";
+favorite.flower = "${CONFIG.favoriteFlower}";`;
 
   await typeText(document.getElementById("codeText"), code, 13);
 

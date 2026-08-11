@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap');
 
 :root {
-  --accent: #8b5cf6;
-  --accent-soft: rgba(139, 92, 246, 0.18);
-  --accent-glow: rgba(139, 92, 246, 0.38);
+  --accent: #f08bb5;
+  --accent-soft: rgba(240, 139, 181, 0.18);
+  --accent-glow: rgba(240, 139, 181, 0.40);
+  --accent-deep: #d85b91;
+  --flower: #ffd6e6;
   --bg: #060608;
   --panel: rgba(15, 15, 20, 0.92);
   --text: #f5f5f5;
@@ -269,6 +271,52 @@ h1 {
   overflow: hidden;
 }
 
+.birthday-card::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: .45;
+}
+
+.lily {
+  position: absolute;
+  top: 14px;
+  width: 82px;
+  height: 92px;
+  opacity: .78;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.lily-left { left: 12px; transform: rotate(-12deg); }
+.lily-right { right: 12px; transform: scaleX(-1) rotate(-12deg); }
+
+.lily span {
+  position: absolute;
+  color: var(--flower);
+  font-size: 34px;
+  text-shadow: 0 0 14px var(--accent-glow);
+  animation: flowerSway 3.5s ease-in-out infinite;
+}
+
+.lily span:nth-child(1) { left: 0; top: 18px; transform: rotate(-18deg); }
+.lily span:nth-child(2) { left: 27px; top: 0; font-size: 42px; animation-delay: .35s; }
+.lily span:nth-child(3) { left: 48px; top: 25px; transform: rotate(18deg); animation-delay: .7s; }
+
+.flower-note {
+  position: relative;
+  display: inline-block;
+  margin-top: 18px;
+  padding: 7px 14px;
+  border: 1px solid rgba(240,139,181,.24);
+  border-radius: 999px;
+  color: #f3b4ce;
+  background: rgba(240,139,181,.07);
+  font-size: 13px;
+}
+
 .birthday-card::before {
   content: "";
   position: absolute;
@@ -291,7 +339,7 @@ h1 {
 }
 
 .wish,
-.final-wish {
+.final-flowers { color: var(--accent); font-size: 28px; letter-spacing: 10px; margin-bottom: 12px; opacity: .8; }\n\n.final-wish {
   margin-top: 28px;
   color: var(--text);
   font-size: clamp(20px, 5vw, 28px);
@@ -374,6 +422,11 @@ h1 {
 .finish-card h1 {
   font-size: clamp(24px, 6vw, 40px);
   line-height: 1.8;
+}
+
+@keyframes flowerSway {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-4px) rotate(3deg); }
 }
 
 @keyframes float {
